@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNAAB Student Hub | Excellence & Integrity</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --funaab-green: #006837;
+            --funaab-gold: #fdb813;
+            --light-bg: #f4f7f6;
+            --dark-text: #2c3e50;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: var(--funaab-green);
+            color: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container i {
+            font-size: 2rem;
+            color: var(--funaab-gold);
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--funaab-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 104, 55, 0.85), rgba(0, 104, 55, 0.85)), 
+                        url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: #e0e0e0;
+        }
+
+        .cta-btn {
+            background-color: var(--funaab-gold);
+            color: var(--dark-text);
+            padding: 12px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.3s;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            background-color: #e5a60f;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--funaab-green);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--funaab-gold);
+            display: block;
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--funaab-green);
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--dark-text);
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .card a.card-link {
+            color: var(--funaab-green);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Calculator Section */
+        .calculator-container {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            max-width: 500px;
+            margin: 0 auto 50px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .calc-btn {
+            width: 100%;
+            background: var(--funaab-green);
+            color: var(--white);
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .calc-btn:hover {
+            background: #004d28;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Mobile Menu */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <i class="fa-solid fa-leaf"></i>
+            <div class="logo-text">FUNAAB Hub</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#portals">Portals</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#calculator">CGPA Tool</a></li>
+                <li><a href="#news">News</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome FUNAABITES!</h1>
+        <p>Your one-stop portal for course materials, portal links, and academic utilities.</p>
+        <a href="https://portal.unaab.edu.ng" target="_blank" class="cta-btn">Go to Official Portal</a>
+    </section>
+
+    <!-- Content Container -->
+    <div class="container">
+
+        <!-- Portals Section -->
+        <h2 class="section-title" id="portals">Quick Portals</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h3>Undergraduate Portal</h3>
+                <p>Course registration, course payment, and result checking.</p>
+                <a href="https://portal.unaab.edu.ng" target="_blank" class="card-link">Access Portal &rarr;</a>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <h3>Postgraduate Portal</h3>
+                <p>Application, registration, and academic resources for PG students.</p>
+                <a href="https://pg.unaab.edu.ng" target="_blank" class="card-link">Access PG Portal &rarr;</a>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-building-columns"></i>
+                <h3>e-Learning / LMS</h3>
+                <p>Access online lectures, lecture materials, and submit assignments.</p>
+                <a href="#" class="card-link">Login LMS &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Student Resources Section -->
+        <h2 class="section-title" id="resources">Student Resources</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fa-solid fa-calendar-days"></i>
+                <h3>Academic Calendar</h3>
+                <p>Stay updated with semester dates, exams, and lecture breaks.</p>
+                <a href="#" class="card-link">View Calendar &rarr;</a>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-file-lines"></i>
+                <h3>Past Questions</h3>
+                <p>Prepare for examinations using previous years' question papers.</p>
+                <a href="#" class="card-link">Download PDF &rarr;</a>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-bus"></i>
+                <h3>Campus Shuttle</h3>
+                <p>Routes and schedule for Campus Shuttle and Transport service.</p>
+                <a href="#" class="card-link">Check Timetable &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Quick CGPA Estimator -->
+        <h2 class="section-title" id="calculator">Quick GPA Estimator</h2>
+        <div class="calculator-container">
+            <div class="form-group">
+                <label for="totalPoints">Total Quality Points (TQP):</label>
+                <input type="number" id="totalPoints" placeholder="e.g. 75">
+            </div>
+            <div class="form-group">
+                <label for="totalUnits">Total Course Units (TNCU):</label>
+                <input type="number" id="totalUnits" placeholder="e.g. 18">
+            </div>
+            <button class="calc-btn" onclick="calculateGPA()">Calculate GPA</button>
+            <div id="result"></div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> FUNAAB Student Hub. Built for Excellence and Integrity.</p>
+        <p style="font-size: 0.8rem; color: #888; margin-top: 5px;">Disclaimer: This is an unofficial student resource portal.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Set dynamic current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Simple GPA Calculation Script
+        function calculateGPA() {
+            const points = parseFloat(document.getElementById('totalPoints').value);
+            const units = parseFloat(document.getElementById('totalUnits').value);
+            const resultDiv = document.getElementById('result');
+
+            if (isNaN(points) || isNaN(units) || units <= 0) {
+                resultDiv.style.color = 'red';
+                resultDiv.textContent = 'Please enter valid values for Points and Units.';
+                return;
+            }
+
+            const gpa = (points / units).toFixed(2);
+            resultDiv.style.color = 'var(--funaab-green)';
+            
+            let classDegree = '';
+            if (gpa >= 4.50) classDegree = 'First Class!';
+            else if (gpa >= 3.50) classDegree = 'Second Class Upper (2:1)';
+            else if (gpa >= 2.40) classDegree = 'Second Class Lower (2:2)';
+            else if (gpa >= 1.50) classDegree = 'Third Class';
+            else classDegree = 'Pass';
+
+            resultDiv.innerHTML = `Your GPA: <strong>${gpa}</strong><br><span style="font-size:0.9rem; color:#555;">(${classDegree})</span>`;
+        }
+    </script>
+</body>
+</html>
