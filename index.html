@@ -1,398 +1,824 @@
+            }
+
+            .hero h1 { font-size: 1.8rem;
+            }
+        }
+    </style> </head> <body> <h3>e-Learning / 
+                LMS</h3> <p>Access online 
+                lectures, lecture materials, and 
+                submit assignments.</p> <a 
+                href="#" class="card-link">Login 
+                LMS &rarr;</a>
+            </div> </div>
+
+        <!-- Student Resources Section --> <h2 
+        class="section-title" 
+        id="resources">Student Resources</h2> 
+        <div class="grid">
+            <div class="card"> <i 
+                class="fa-solid 
+                fa-calendar-days"></i> 
+                <h3>Academic Calendar</h3> 
+                <p>Stay updated with semester 
+                dates, exams, and lecture 
+                breaks.</p> <a href="#" 
+                class="card-link">View Calendar 
+                &rarr;</a>
+            </div> <div class="card"> <i 
+                class="fa-solid 
+                fa-file-lines"></i> <h3>Past 
+                Questions</h3> <p>Prepare for 
+                examinations using previous 
+                years' question papers.</p> <a 
+                href="#" 
+                class="card-link">Download PDF 
+                &rarr;</a>
+            </div> <div class="card"> <i 
+                class="fa-solid fa-bus"></i> 
+                <h3>Campus Shuttle</h3> 
+                <p>Routes and schedule for 
+                Campus Shuttle and Transport 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FUNAAB Student Hub | Excellence & Integrity</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
+    <title>PayQuick - Fast & Reliable Bill Payments</title>
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --funaab-green: #006837;
-            --funaab-gold: #fdb813;
-            --light-bg: #f4f7f6;
-            --dark-text: #2c3e50;
-            --white: #ffffff;
+            --primary: #4F46E5;
+            --primary-hover: #4338CA;
+            --secondary: #10B981;
+            --opay-color: #00B875;
+            --dark: #0F172A;
+            --light-bg: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --border: #E2E8F0;
+            --radius: 16px;
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         body {
             background-color: var(--light-bg);
-            color: var(--dark-text);
-            line-height: 1.6;
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
-        /* Header / Navbar */
+        /* Navbar */
         header {
-            background-color: var(--funaab-green);
-            color: var(--white);
-            padding: 1rem 5%;
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .logo-container {
+        .logo {
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
         }
 
-        .logo-container i {
-            font-size: 2rem;
-            color: var(--funaab-gold);
-        }
-
-        .logo-text {
-            font-size: 1.4rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        nav ul {
+        .user-wallet {
+            background: #EEF2FF;
+            padding: 8px 16px;
+            border-radius: 30px;
             display: flex;
-            list-style: none;
-            gap: 20px;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid #E0E7FF;
         }
 
-        nav a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
+        .wallet-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
         }
 
-        nav a:hover {
-            color: var(--funaab-gold);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 104, 55, 0.85), rgba(0, 104, 55, 0.85)), 
-                        url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: var(--white);
-            padding: 80px 5%;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-            color: #e0e0e0;
-        }
-
-        .cta-btn {
-            background-color: var(--funaab-gold);
-            color: var(--dark-text);
-            padding: 12px 28px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.2s, background-color 0.3s;
-            display: inline-block;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            background-color: #e5a60f;
+        .wallet-amount {
+            font-weight: 700;
+            color: var(--primary);
         }
 
         /* Container */
         .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            flex: 1;
         }
 
-        /* Section Titles */
+        .hero-banner {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            color: white;
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 12px 30px rgba(79, 70, 229, 0.2);
+        }
+
+        .hero-banner h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .hero-banner p {
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
         .section-title {
-            text-align: center;
-            margin-bottom: 30px;
-            color: var(--funaab-green);
-            position: relative;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            color: var(--dark);
         }
 
-        .section-title::after {
-            content: '';
-            width: 60px;
-            height: 3px;
-            background: var(--funaab-gold);
-            display: block;
-            margin: 8px auto 0;
-            border-radius: 2px;
-        }
-
-        /* Grid Layout */
-        .grid {
+        /* Bill Options Grid */
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
         }
 
-        /* Cards */
-        .card {
-            background: var(--white);
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem 1rem;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
         }
 
-        .card:hover {
+        .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: var(--primary);
+            box-shadow: 0 15px 30px rgba(79, 70, 229, 0.12);
         }
 
-        .card i {
-            font-size: 2.5rem;
-            color: var(--funaab-green);
-            margin-bottom: 15px;
+        .icon-box {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
         }
 
-        .card h3 {
-            margin-bottom: 10px;
-            color: var(--dark-text);
-        }
+        .bg-phone { background: #EEF2FF; color: #4F46E5; }
+        .bg-wifi { background: #ECFDF5; color: #10B981; }
+        .bg-doc { background: #FEF3C7; color: #D97706; }
+        .bg-game { background: #F3E8FF; color: #9333EA; }
+        .bg-bolt { background: #FEF2F2; color: #EF4444; }
 
-        .card p {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        .card a.card-link {
-            color: var(--funaab-green);
-            text-decoration: none;
+        .service-card span {
+            font-size: 0.95rem;
             font-weight: 600;
+            color: var(--text-main);
         }
 
-        /* Calculator Section */
-        .calculator-container {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            max-width: 500px;
-            margin: 0 auto 50px;
+        /* Modal Base */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-box {
+            background: var(--card-bg);
+            width: 100%;
+            max-width: 480px;
+            border-radius: var(--radius);
+            padding: 2rem;
+            position: relative;
+            transform: scale(0.9);
+            transition: all 0.3s ease;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-overlay.active .modal-box {
+            transform: scale(1);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.25rem;
+            background: #F1F5F9;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: var(--text-muted);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-btn:hover { background: #E2E8F0; }
+
+        .modal-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-header h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--dark);
         }
 
         .form-group {
-            margin-bottom: 15px;
-            text-align: left;
+            margin-bottom: 1.2rem;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 5px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text-main);
         }
 
-        .form-group input {
+        .form-control {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
+            padding: 12px 16px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border 0.2s;
         }
 
-        .calc-btn {
+        .form-control:focus {
+            border-color: var(--primary);
+        }
+
+        .btn {
             width: 100%;
-            background: var(--funaab-green);
-            color: var(--white);
-            padding: 12px;
+            padding: 14px;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
             font-size: 1rem;
             cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn:hover {
+            background: var(--primary-hover);
+        }
+
+        /* Payment Methods list */
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .pay-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 16px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .pay-option:hover {
+            border-color: var(--primary);
+            background: #F8FAFC;
+        }
+
+        .pay-option-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
             font-weight: 600;
         }
 
-        .calc-btn:hover {
-            background: #004d28;
-        }
-
-        #result {
-            margin-top: 15px;
-            font-weight: bold;
-            text-align: center;
+        .pay-option-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.1rem;
         }
 
-        /* Footer */
-        footer {
-            background: #111;
-            color: var(--white);
-            text-align: center;
-            padding: 20px;
+        /* Specific Detail Views */
+        .bank-details-box {
+            background: #F1F5F9;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #CBD5E1;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            color: var(--text-muted);
             font-size: 0.9rem;
         }
 
-        /* Responsive Mobile Menu */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav ul {
-                gap: 15px;
-                font-size: 0.9rem;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-            }
+        .detail-value {
+            font-weight: 700;
+            color: var(--dark);
         }
+
+        .copy-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            margin-left: 6px;
+        }
+
+        /* Receipt styling */
+        .receipt-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .receipt-header {
+            border-bottom: 2px dashed var(--border);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .receipt-badge {
+            display: inline-block;
+            background: #DEF7EC;
+            color: #03543F;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-top: 6px;
+        }
+
+        .receipt-brand {
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .receipt-amount {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin: 10px 0;
+        }
+
+        .receipt-details {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .receipt-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.88rem;
+            padding: 6px 0;
+        }
+
+        .receipt-row .label { color: var(--text-muted); }
+        .receipt-row .val { font-weight: 600; color: var(--dark); }
+
+        .opay-btn {
+            background: var(--opay-color);
+            color: white;
+        }
+        .opay-btn:hover {
+            background: #009E64;
+        }
+
+        /* Utility */
+        .hidden { display: none !important; }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
-        <div class="logo-container">
-            <i class="fa-solid fa-leaf"></i>
-            <div class="logo-text">FUNAAB Hub</div>
+        <div class="navbar">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-bolt-lightning"></i> PayQuick
+            </a>
+            <div class="user-wallet">
+                <span class="wallet-label">Balance:</span>
+                <span class="wallet-amount" id="userBalance">₦25,450.00</span>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#portals">Portals</a></li>
-                <li><a href="#resources">Resources</a></li>
-                <li><a href="#calculator">CGPA Tool</a></li>
-                <li><a href="#news">News</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome FUNAABITES!</h1>
-        <p>Your one-stop portal for course materials, portal links, and academic utilities.</p>
-        <a href="https://portal.unaab.edu.ng" target="_blank" class="cta-btn">Go to Official Portal</a>
-    </section>
-
-    <!-- Content Container -->
+    <!-- Main Content -->
     <div class="container">
-
-        <!-- Portals Section -->
-        <h2 class="section-title" id="portals">Quick Portals</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="fa-solid fa-graduation-cap"></i>
-                <h3>Undergraduate Portal</h3>
-                <p>Course registration, course payment, and result checking.</p>
-                <a href="https://portal.unaab.edu.ng" target="_blank" class="card-link">Access Portal &rarr;</a>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-book-open-reader"></i>
-                <h3>Postgraduate Portal</h3>
-                <p>Application, registration, and academic resources for PG students.</p>
-                <a href="https://pg.unaab.edu.ng" target="_blank" class="card-link">Access PG Portal &rarr;</a>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-building-columns"></i>
-                <h3>e-Learning / LMS</h3>
-                <p>Access online lectures, lecture materials, and submit assignments.</p>
-                <a href="#" class="card-link">Login LMS &rarr;</a>
-            </div>
+        <div class="hero-banner">
+            <h1>Quick & Secure Bill Payments</h1>
+            <p>Pay electricity, airtime, data, RRR invoices, and betting wallets instantly.</p>
         </div>
 
-        <!-- Student Resources Section -->
-        <h2 class="section-title" id="resources">Student Resources</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="fa-solid fa-calendar-days"></i>
-                <h3>Academic Calendar</h3>
-                <p>Stay updated with semester dates, exams, and lecture breaks.</p>
-                <a href="#" class="card-link">View Calendar &rarr;</a>
+        <h2 class="section-title">Select a Service</h2>
+
+        <!-- Services Grid -->
+        <div class="services-grid">
+            <div class="service-card" onclick="openServiceModal('Airtime Purchase', 'Phone Number', 'phone')">
+                <div class="icon-box bg-phone"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                <span>Airtime</span>
             </div>
-            <div class="card">
-                <i class="fa-solid fa-file-lines"></i>
-                <h3>Past Questions</h3>
-                <p>Prepare for examinations using previous years' question papers.</p>
-                <a href="#" class="card-link">Download PDF &rarr;</a>
+            <div class="service-card" onclick="openServiceModal('Data Subscription', 'Phone Number', 'wifi')">
+                <div class="icon-box bg-wifi"><i class="fa-solid fa-wifi"></i></div>
+                <span>Data</span>
             </div>
-            <div class="card">
-                <i class="fa-solid fa-bus"></i>
-                <h3>Campus Shuttle</h3>
-                <p>Routes and schedule for Campus Shuttle and Transport service.</p>
-                <a href="#" class="card-link">Check Timetable &rarr;</a>
+            <div class="service-card" onclick="openServiceModal('RRR Invoice Payment', 'RRR Number', 'file-invoice')">
+                <div class="icon-box bg-doc"><i class="fa-solid fa-file-invoice"></i></div>
+                <span>RRR Invoice</span>
+            </div>
+            <div class="service-card" onclick="openServiceModal('Betting Top-Up', 'User / Account ID', 'gamepad')">
+                <div class="icon-box bg-game"><i class="fa-solid fa-gamepad"></i></div>
+                <span>Betting</span>
+            </div>
+            <div class="service-card" onclick="openServiceModal('Electricity Bill', 'Meter Number', 'bolt')">
+                <div class="icon-box bg-bolt"><i class="fa-solid fa-bolt"></i></div>
+                <span>Electricity</span>
             </div>
         </div>
-
-        <!-- Quick CGPA Estimator -->
-        <h2 class="section-title" id="calculator">Quick GPA Estimator</h2>
-        <div class="calculator-container">
-            <div class="form-group">
-                <label for="totalPoints">Total Quality Points (TQP):</label>
-                <input type="number" id="totalPoints" placeholder="e.g. 75">
-            </div>
-            <div class="form-group">
-                <label for="totalUnits">Total Course Units (TNCU):</label>
-                <input type="number" id="totalUnits" placeholder="e.g. 18">
-            </div>
-            <button class="calc-btn" onclick="calculateGPA()">Calculate GPA</button>
-            <div id="result"></div>
-        </div>
-
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; <span id="year"></span> FUNAAB Student Hub. Built for Excellence and Integrity.</p>
-        <p style="font-size: 0.8rem; color: #888; margin-top: 5px;">Disclaimer: This is an unofficial student resource portal.</p>
-    </footer>
+    <!-- MAIN PAYMENT FLOW MODAL -->
+    <div class="modal-overlay" id="paymentModal">
+        <div class="modal-box">
+            <button class="close-btn" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
 
-    <!-- JavaScript -->
+            <!-- STEP 1: Enter Details -->
+            <div id="stepDetails">
+                <div class="modal-header">
+                    <h2 id="modalTitle">Service Title</h2>
+                </div>
+                <form onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label id="inputLabel">Account / ID Number</label>
+                        <input type="text" class="form-control" id="accountInput" placeholder="e.g. 08012345678" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Amount (₦)</label>
+                        <input type="number" class="form-control" id="amountInput" placeholder="Enter amount" min="100" required>
+                    </div>
+                    <button type="submit" class="btn">Continue to Payment <i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+
+            <!-- STEP 2: Select Payment Method -->
+            <div id="stepMethods" class="hidden">
+                <div class="modal-header">
+                    <h2>Select Payment Method</h2>
+                </div>
+                <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom: 1rem;">
+                    Pay <strong id="summaryAmount" style="color:var(--dark)">₦0.00</strong> for <span id="summaryService">Service</span>
+                </p>
+
+                <div class="payment-methods">
+                    <div class="pay-option" onclick="selectPaymentMethod('transfer')">
+                        <div class="pay-option-left">
+                            <div class="pay-option-icon" style="background:#EEF2FF; color:#4F46E5;"><i class="fa-solid fa-building-columns"></i></div>
+                            <span>Bank Transfer</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-right" style="color:var(--text-muted)"></i>
+                    </div>
+
+                    <div class="pay-option" onclick="selectPaymentMethod('opay')">
+                        <div class="pay-option-left">
+                            <div class="pay-option-icon" style="background:#E6F8F1; color:#00B875;"><i class="fa-solid fa-wallet"></i></div>
+                            <span>Pay with OPay</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-right" style="color:var(--text-muted)"></i>
+                    </div>
+
+                    <div class="pay-option" onclick="selectPaymentMethod('ussd')">
+                        <div class="pay-option-left">
+                            <div class="pay-option-icon" style="background:#FEF3C7; color:#D97706;"><i class="fa-solid fa-hashtag"></i></div>
+                            <span>Pay with USSD</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-right" style="color:var(--text-muted)"></i>
+                    </div>
+
+                    <div class="pay-option" onclick="selectPaymentMethod('card')">
+                        <div class="pay-option-left">
+                            <div class="pay-option-icon" style="background:#F3E8FF; color:#9333EA;"><i class="fa-solid fa-credit-card"></i></div>
+                            <span>Pay with Debit Card</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-right" style="color:var(--text-muted)"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 3A: Bank Transfer View -->
+            <div id="stepTransfer" class="hidden">
+                <div class="modal-header">
+                    <h2>Bank Transfer Details</h2>
+                </div>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom: 1rem;">
+                    Transfer the exact amount to the dedicated account details below:
+                </p>
+                <div class="bank-details-box">
+                    <div class="detail-row">
+                        <span class="detail-label">Bank</span>
+                        <span class="detail-value">Moniepoint</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Account Number</span>
+                        <span class="detail-value">
+                            <span id="accNum">7040167426</span>
+                            <button class="copy-btn" onclick="copyAccount()">Copy</button>
+                        </span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Account Name</span>
+                        <span class="detail-value">Bankole Joshua</span>
+                    </div>
+                </div>
+                <button class="btn" onclick="completePayment('Bank Transfer')"><i class="fa-solid fa-check"></i> I Have Made The Payment</button>
+            </div>
+
+            <!-- STEP 3B: OPay Redirect View -->
+            <div id="stepOpay" class="hidden">
+                <div class="modal-header">
+                    <h2>Pay with OPay</h2>
+                </div>
+                <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom: 1.5rem;">
+                    You will be redirected to complete your payment inside the OPay App or Web portal.
+                </p>
+                <a href="https://www.opayweb.com/" target="_blank" class="btn opay-btn" onclick="completePayment('OPay Direct')">
+                    <i class="fa-solid fa-external-link"></i> Open OPay App
+                </a>
+            </div>
+
+            <!-- STEP 3C: USSD View -->
+            <div id="stepUSSD" class="hidden">
+                <div class="modal-header">
+                    <h2>USSD Payment</h2>
+                </div>
+                <div class="form-group">
+                    <label>Select Your Bank</label>
+                    <select class="form-control">
+                        <option>GTBank (*737*)</option>
+                        <option>First Bank (*894*)</option>
+                        <option>Zenith Bank (*966*)</option>
+                        <option>UBA (*919*)</option>
+                        <option>Access Bank (*901*)</option>
+                    </select>
+                </div>
+                <div style="background:#FFFBEB; border:1px solid #FCD34D; padding:12px; border-radius:8px; font-size:0.85rem; margin-bottom:1rem; color:#92400E;">
+                    Dial code on your registered phone line to complete payment.
+                </div>
+                <button class="btn" onclick="completePayment('USSD Code')">Confirm USSD Payment</button>
+            </div>
+
+            <!-- STEP 3D: Debit Card View -->
+            <div id="stepCard" class="hidden">
+                <div class="modal-header">
+                    <h2>Pay with Debit Card</h2>
+                </div>
+                <form onsubmit="handleCardSubmit(event)">
+                    <div class="form-group">
+                        <label>Card Number</label>
+                        <input type="text" class="form-control" placeholder="1234 5678 9101 1121" maxlength="19" required>
+                    </div>
+                    <div style="display: flex; gap: 10px;">
+                        <div class="form-group" style="flex:1;">
+                            <label>Expiry Date</label>
+                            <input type="text" class="form-control" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div class="form-group" style="flex:1;">
+                            <label>CVV</label>
+                            <input type="password" class="form-control" placeholder="123" maxlength="3" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Pay Now</button>
+                </form>
+            </div>
+
+            <!-- STEP 4: Transaction Receipt -->
+            <div id="stepReceipt" class="hidden">
+                <div class="receipt-card">
+                    <div class="receipt-brand">
+                        <i class="fa-solid fa-bolt-lightning"></i> PayQuick
+                    </div>
+                    <div class="receipt-badge"><i class="fa-solid fa-circle-check"></i> Payment Successful</div>
+                    <div class="receipt-amount" id="receiptAmount">₦0.00</div>
+
+                    <div class="receipt-details">
+                        <div class="receipt-row">
+                            <span class="label">Website Name:</span>
+                            <span class="val">PayQuick Digital</span>
+                        </div>
+                        <div class="receipt-row">
+                            <span class="label">Service Paid:</span>
+                            <span class="val" id="receiptService">Service</span>
+                        </div>
+                        <div class="receipt-row">
+                            <span class="label">Recipient / Account:</span>
+                            <span class="val" id="receiptRecipient">---</span>
+                        </div>
+                        <div class="receipt-row">
+                            <span class="label">Payment Method:</span>
+                            <span class="val" id="receiptMethod">---</span>
+                        </div>
+                        <div class="receipt-row">
+                            <span class="label">Reference ID:</span>
+                            <span class="val" id="receiptRef">PQ-98321045</span>
+                        </div>
+                        <div class="receipt-row" style="border-top:1px dashed var(--border); padding-top:8px; margin-top:4px;">
+                            <span class="label">Updated Balance:</span>
+                            <span class="val" id="receiptBalance" style="color:var(--primary);">₦25,450.00</span>
+                        </div>
+                    </div>
+
+                    <button class="btn" onclick="closeModal()">Done</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <script>
-        // Set dynamic current year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
+        // Data State
+        let activeService = '';
+        let recipientValue = '';
+        let paymentAmount = 0;
+        let selectedMethod = '';
+        let currentBalance = 25450.00;
 
-        // Simple GPA Calculation Script
-        function calculateGPA() {
-            const points = parseFloat(document.getElementById('totalPoints').value);
-            const units = parseFloat(document.getElementById('totalUnits').value);
-            const resultDiv = document.getElementById('result');
+        function updateBalanceDisplay() {
+            document.getElementById('userBalance').innerText = '₦' + currentBalance.toLocaleString('en-US', {minimumFractionDigits: 2});
+        }
 
-            if (isNaN(points) || isNaN(units) || units <= 0) {
-                resultDiv.style.color = 'red';
-                resultDiv.textContent = 'Please enter valid values for Points and Units.';
-                return;
-            }
-
-            const gpa = (points / units).toFixed(2);
-            resultDiv.style.color = 'var(--funaab-green)';
+        function openServiceModal(serviceName, inputLabel, icon) {
+            activeService = serviceName;
+            document.getElementById('modalTitle').innerText = serviceName;
+            document.getElementById('inputLabel').innerText = inputLabel;
+            document.getElementById('accountInput').placeholder = 'Enter ' + inputLabel.toLowerCase();
             
-            let classDegree = '';
-            if (gpa >= 4.50) classDegree = 'First Class!';
-            else if (gpa >= 3.50) classDegree = 'Second Class Upper (2:1)';
-            else if (gpa >= 2.40) classDegree = 'Second Class Lower (2:2)';
-            else if (gpa >= 1.50) classDegree = 'Third Class';
-            else classDegree = 'Pass';
+            // Show first step
+            hideAllSteps();
+            document.getElementById('stepDetails').classList.remove('hidden');
+            document.getElementById('paymentModal').classList.add('active');
+        }
 
-            resultDiv.innerHTML = `Your GPA: <strong>${gpa}</strong><br><span style="font-size:0.9rem; color:#555;">(${classDegree})</span>`;
+        function closeModal() {
+            document.getElementById('paymentModal').classList.remove('active');
+            // Clear inputs
+            document.getElementById('accountInput').value = '';
+            document.getElementById('amountInput').value = '';
+        }
+
+        function hideAllSteps() {
+            document.getElementById('stepDetails').classList.add('hidden');
+            document.getElementById('stepMethods').classList.add('hidden');
+            document.getElementById('stepTransfer').classList.add('hidden');
+            document.getElementById('stepOpay').classList.add('hidden');
+            document.getElementById('stepUSSD').classList.add('hidden');
+            document.getElementById('stepCard').classList.add('hidden');
+            document.getElementById('stepReceipt').classList.add('hidden');
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            recipientValue = document.getElementById('accountInput').value;
+            paymentAmount = parseFloat(document.getElementById('amountInput').value);
+
+            document.getElementById('summaryAmount').innerText = '₦' + paymentAmount.toLocaleString('en-US', {minimumFractionDigits: 2});
+            document.getElementById('summaryService').innerText = activeService;
+
+            hideAllSteps();
+            document.getElementById('stepMethods').classList.remove('hidden');
+        }
+
+        function selectPaymentMethod(method) {
+            hideAllSteps();
+            if (method === 'transfer') {
+                selectedMethod = 'Bank Transfer (Moniepoint)';
+                document.getElementById('stepTransfer').classList.remove('hidden');
+            } else if (method === 'opay') {
+                selectedMethod = 'OPay';
+                document.getElementById('stepOpay').classList.remove('hidden');
+            } else if (method === 'ussd') {
+                selectedMethod = 'USSD Code';
+                document.getElementById('stepUSSD').classList.remove('hidden');
+            } else if (method === 'card') {
+                selectedMethod = 'Debit Card';
+                document.getElementById('stepCard').classList.remove('hidden');
+            }
+        }
+
+        function handleCardSubmit(e) {
+            e.preventDefault();
+            completePayment('Debit Card');
+        }
+
+        function completePayment(methodOverride) {
+            if (methodOverride) selectedMethod = methodOverride;
+
+            // Generate Random Reference
+            const randomRef = 'PQ-' + Math.floor(10000000 + Math.random() * 90000000);
+
+            // Populate Receipt
+            document.getElementById('receiptAmount').innerText = '₦' + paymentAmount.toLocaleString('en-US', {minimumFractionDigits: 2});
+            document.getElementById('receiptService').innerText = activeService;
+            document.getElementById('receiptRecipient').innerText = recipientValue;
+            document.getElementById('receiptMethod').innerText = selectedMethod;
+            document.getElementById('receiptRef').innerText = randomRef;
+            document.getElementById('receiptBalance').innerText = '₦' + currentBalance.toLocaleString('en-US', {minimumFractionDigits: 2});
+
+            hideAllSteps();
+            document.getElementById('stepReceipt').classList.remove('hidden');
+        }
+
+        function copyAccount() {
+            const accNum = document.getElementById('accNum').innerText;
+            navigator.clipboard.writeText(accNum);
+            alert('Account number copied to clipboard!');
         }
     </script>
 </body>
